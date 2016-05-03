@@ -1,4 +1,4 @@
-exports.loadLcdDigits = function () {
+function loadLcdDigits() {
     return [
         {
             digit: '0',
@@ -44,7 +44,7 @@ exports.loadLcdDigits = function () {
 }
 
 
-exports.buildDigitArray = function (input) {
+function buildDigitArray(input) {
     var digitsArray = [];
 
     digitsArray = input.split("");
@@ -60,7 +60,7 @@ function findLcdDigits(digit, lcds) {
     }
 }
 
-exports.buildLcdDigts = function (digitsArray, lcds) {
+function buildLcdDigts(digitsArray, lcds) {
     var lcdDigits = [];
 
     digitsArray.forEach(function (digit) {
@@ -83,7 +83,7 @@ function buildLcdPart(lcdDigitText, lcdDigits, k) {
     return lcdDigitText;
 }
 
-exports.buildLcdDigitText = function (lcdDigits) {
+function buildLcdDigitText(lcdDigits) {
     var lcdDigitText = '';
 
     for (var k = 0; k < 3; k++) {
@@ -95,4 +95,9 @@ exports.buildLcdDigitText = function (lcdDigits) {
     console.log(lcdDigitText);
 }
 
-
+module.exports = {
+    loadLcdDigits: loadLcdDigits,
+    buildDigitArray: buildDigitArray,
+    buildLcdDigts: buildLcdDigts,
+    buildLcdDigitText: buildLcdDigitText
+};
