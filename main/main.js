@@ -1,6 +1,5 @@
-var printLcdDigits = require('./lcdDigits');
-
 exports.creatLcdDigits = function (inputs) {
+    var printLcdDigits = require('./lcdDigits');
 
     var lcds = printLcdDigits.loadLcdDigits();
     var digitsArray = printLcdDigits.buildDigitArray(inputs);
@@ -9,4 +8,3 @@ exports.creatLcdDigits = function (inputs) {
 
     printLcdDigits.buildLcdDigitText(lcdDigits);
 }
-
